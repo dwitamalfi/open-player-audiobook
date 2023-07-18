@@ -38,6 +38,9 @@ color: white;
   background-image: url(/assets/img/silhouette-young-fitness-man-running-sunrise.jpg);
   background-size: cover;
 }
+.content{
+  overflow: scroll;
+}
 .container-card-audiobook{
   width: 100%;
 }
@@ -82,4 +85,7 @@ color: white;
   height: 60%;
   width: 100%;
   border-radius: 5px;
+}
+.section-name-audiobook{
+  font-size: 20px;
 }
