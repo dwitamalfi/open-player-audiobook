@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,62 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+.sidebar{
+  width: 20%;
+  height: 100%;
+}
+.sidebar-item a:hover{
+background-color: #009d6c;
+cursor: pointer;
+color: white;
+}
+.mybackground{
+  background-image: url(/assets/img/silhouette-young-fitness-man-running-sunrise.jpg);
+  background-size: cover;
+}
+.container-card-audiobook{
+  width: 100%;
+}
+.container-card-audiobook-sm{
+  overflow: scroll hidden;
+  width: 100%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.container-card-audiobook-sm::-webkit-scrollbar{
+  display: none;
+}
+.card-audiobook{
+  display: flex;
+  margin: 1rem;
+  /* overflow: scroll hidden; */
+  width: fit-content;
+}
+.card-audiobook a {
+  padding: 15px;
+  border-radius: 10px;
+}
+.card-audiobook a:hover {
+  background-color: #009d6c;;
+  cursor: pointer;
+  color: white;
+}
+.card-audiobook-title{
+  font-weight: 700;
+  width: 140px;
+
+}
+.card-audiobook-caption{
+  display: flex;
+  flex-direction: column;
+}
+.card-audiobook-desc{
+  font-weight: 200;
+}
+.card-audiobook-image{
+  height: 60%;
+  width: 100%;
+  border-radius: 5px;
 }
