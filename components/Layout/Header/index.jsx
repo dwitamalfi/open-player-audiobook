@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from 'next/link';
+import Image from "next/image";
 
 export const Navbar = ({handleClickLogin}) => {
   
@@ -7,17 +8,24 @@ export const Navbar = ({handleClickLogin}) => {
   return (
     <div className="container fixed max-w-full bg-white z-10 py-5 bg-opacity-80 shadow-sm backdrop-blur-xl">
     <div className="xl:mx-20 lg:mx-20 md:mx-auto flex justify-between">
-      <a
+      <Link
         href="/"
         aria-label="Dimulai"
         title="Dimulai"
         className="inline-flex items-center"
       >
-        <img src='/assets/images/logodimulai.png' className="mr-3 h-8 rounded-full" alt="Logo" />
+         <Image 
+          src='/assets/images/logodimulai.png' 
+          className="mr-3 h-8 rounded-full" 
+          alt="Logo" 
+          width='32' // required
+          height='32' // change to suit your needs
+        />
+        {/* <img src='/assets/images/logodimulai.png' className="mr-3 h-8 rounded-full" alt="Logo" /> */}
         <span className="ml-2 text-2xl font-blueberry tracking-wide text-gray-800 ">
           Dimulai
         </span>
-      </a>
+      </Link>
       <ul className="relative flex items-center max-w-full justify-end hidden min-w-xs space-x-7 md:flex">
         <li>
             <button
