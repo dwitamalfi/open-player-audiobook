@@ -1,7 +1,7 @@
 import React from "react"
 import { useRouter } from "next/router"
 import { FontAwesomeIcon, config } from '@fortawesome/react-fontawesome'
-import { faHouse, faRadio, faSearch, faTimeline, faUserGroup } from "@fortawesome/free-solid-svg-icons"
+import { faHouse, faMobileAndroid, faRadio, faRobot, faSearch, faTimeline, faUserGroup } from "@fortawesome/free-solid-svg-icons"
 import { faUser } from "@fortawesome/free-regular-svg-icons"
 
 export default function Sidebar(){
@@ -18,14 +18,14 @@ export default function Sidebar(){
                 </li>
                 <hr/>
                 <li className='sidebar-item'>
-                   <a className={router?.pathname == "/teams"? "bg-[#01C587]  px-5 py-5 block w-full text-white" : "bg-white  p-5   block w-full" }   onClick={()=> router.push('/teams')}>
+                   <a className={router?.pathname == "/search"? "bg-[#01C587]  px-5 py-5 block w-full text-white" : "bg-white  p-5   block w-full" }   onClick={()=> router.push('/teams')}>
                          <FontAwesomeIcon icon={faSearch} />  Search
                    </a>
                   
                 </li>
                 <hr/>
                 <li className='sidebar-item'>
-                   <a className={router?.pathname == "/timeline"? "bg-[#01C587]  px-5 py-5 block w-full text-white" : "bg-white  p-5   block w-full" }   onClick={()=> router.push('/')}>
+                   <a className={router?.pathname == "/collection"? "bg-[#01C587]  px-5 py-5 block w-full text-white" : "bg-white  p-5   block w-full" }   onClick={()=> router.push('/')}>
                         <FontAwesomeIcon icon={faRadio} />  Koleksi
                    </a>
                 </li>
@@ -36,6 +36,22 @@ export default function Sidebar(){
                    </a>
                 </li>
                 <hr/>
+            </ul>
+        </div>
+        <div>
+            <h3 className="m-5">Dapatkan di Aplikasi</h3>
+            <ul>
+                <li className='sidebar-item'>
+                    <a className={router?.pathname == "/android"? "bg-[#01C587] px-5 py-5 block w-full text-white" : "bg-white  p-5   block w-full" } onClick={()=> router.push('/dashboard')}>
+                          <FontAwesomeIcon icon={faRobot} /> Android
+                    </a>
+                </li>
+                <hr/>
+                <li className='sidebar-item'>
+                    <a className={router?.pathname == "/iphone"? "bg-[#01C587] px-5 py-5 block w-full text-white" : "bg-white  p-5   block w-full" } onClick={()=> router.push('/dashboard')}>
+                          <FontAwesomeIcon icon={faRobot} /> IOS
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

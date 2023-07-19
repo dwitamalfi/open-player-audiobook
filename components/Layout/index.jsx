@@ -3,7 +3,7 @@ import Header from './Header/index';
 import Sidebar from "./Sidebar";
 import { useRouter } from "next/router"
 import { FontAwesomeIcon, config } from '@fortawesome/react-fontawesome'
-import { faHouse, faTimeline, faUserGroup } from "@fortawesome/free-solid-svg-icons"
+import { faHome, faHouse, faRadio, faSearch, faTimeline, faUserGroup } from "@fortawesome/free-solid-svg-icons"
 import { faUser } from "@fortawesome/free-regular-svg-icons"
 
 
@@ -24,22 +24,22 @@ const Layout = ({handleLogin, children }) => {
           </div>
           <br />
           <div className='footer hidden flex-row w-full justify-around bottom-0 fixed footer-nav max-[992px]:flex' >
-                    <a className={router?.pathname == "/dashboard"? "text-[#01C587] px-5 py-5 block w-full" : "p-5 block w-full" }>
+                    <a className={router?.pathname == "/"? "text-[#01C587] px-5 py-5 block w-full" : "p-5 block w-full" }>
                       <div className="nav-item">
-                        <FontAwesomeIcon icon={faHouse} />
+                        <FontAwesomeIcon icon={faHome} />
                         <span>Home</span>
                       </div>
                     
                     </a>
-                    <a className={router?.pathname == "/team"? "text-[#01C587] px-5 py-5 block w-full" : "p-5 block w-full" }>
+                    <a className={router?.pathname == "/search"? "text-[#01C587] px-5 py-5 block w-full" : "p-5 block w-full" }>
                       <div className="nav-item">
-                         <FontAwesomeIcon icon={faUserGroup} />
-                         <span>Team</span>
+                         <FontAwesomeIcon icon={faSearch} />
+                         <span>Search</span>
                       </div>
                     </a>
-                    <a className={router?.pathname == "/timeline"? "text-[#01C587]  px-5 py-5 block w-full" : "p-5 block w-full" }   onClick={()=> router.push('/')}>
+                    <a className={router?.pathname == "/collection"? "text-[#01C587]  px-5 py-5 block w-full" : "p-5 block w-full" }   onClick={()=> router.push('/')}>
                       <div className="nav-item">
-                        <FontAwesomeIcon icon={faTimeline} />  
+                        <FontAwesomeIcon icon={faRadio} />  
                         <span>Timeline</span>
                       </div>
                     </a>

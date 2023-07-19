@@ -34,12 +34,33 @@ background-color: #009d6c;
 cursor: pointer;
 color: white;
 }
+.footer{
+  background-color: white;
+}
+.nav-item{
+  flex-direction: column;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+.footer-nav{
+  box-shadow: inset 0px 11px 8px -10px #CCC;
+}
 .mybackground{
   background-image: url(/assets/img/silhouette-young-fitness-man-running-sunrise.jpg);
   background-size: cover;
 }
 .content{
   overflow: scroll;
+  width: 80%;
+}
+@media screen and (max-width: 992px) {
+  .content{
+    width: 100%;
+  }
 }
 .container-card-audiobook{
   width: 100%;
@@ -49,6 +70,16 @@ color: white;
   width: 100%;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+.container-card-audiobook-grid{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    gap: 15px;
+    justify-content: left;
+    padding: 0px 20px;
+    width: 100%;
+    overflow: scroll hidden
 }
 
 .container-card-audiobook-sm::-webkit-scrollbar{
@@ -88,4 +119,9 @@ color: white;
 }
 .section-name-audiobook{
   font-size: 20px;
+}
+.card-audiobook-grid-flex{
+  display: flex;
+  font-weight: 700;
+  width: 200px;
 }
